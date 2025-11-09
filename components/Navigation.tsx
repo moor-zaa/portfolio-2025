@@ -24,7 +24,7 @@ export function Navigation() {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="w-12 h-12 shrink-0">
-          <img src="/icon.jpg" alt="" />
+          <img src="/images/icon.png" alt="" />
         </a>
 
         {/* Desktop Navigation */}
