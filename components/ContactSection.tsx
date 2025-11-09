@@ -32,15 +32,17 @@ export function ContactSection() {
     setLoading(true);
     emailjs
       .send(
-        "service_az7h3ys",
-        "template_ybq3hmx",
+        "service_v84thph",
+        "template_rplv63o",
         {
-          to_name: "Morteza",
-          from_name: formData.email,
-          to_email: "mori.alipour95@gmail.com",
+          name: formData.name,
+          title: formData.subject,
+          email: formData.email,
           message: formData.message,
         },
-        "D6FYRgEZOeq8lf0-Y"
+        {
+          publicKey: "_cxfGaRuTv-HIG2Dn",
+        }
       )
       .then(() => {
         setLoading(false);
