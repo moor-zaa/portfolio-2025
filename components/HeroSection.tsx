@@ -94,7 +94,7 @@ export function HeroSection() {
             {/* Shadow text effect */}
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 0.09, y: 0 }}
+              animate={{ opacity: 0.06, y: 0 }}
               transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="absolute top-4 left-4 text-white uppercase leading-none pointer-events-none text-[clamp(4rem,12vw,7.5rem)]"
             >
@@ -107,7 +107,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="uppercase leading-none relative z-10 text-[clamp(4rem,12vw,7.5rem)] text-white/60"
+              className="uppercase leading-none relative z-10 text-[clamp(4rem,12vw,7.5rem)] text-white/70"
             >
               ALIPOUR
             </motion.h1>
