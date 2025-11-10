@@ -226,7 +226,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-20">
       {/* Gradient background with green accent */}
       <div className="absolute inset-0 bg-linear-to-br from-black via-gray-900 to-emerald-950/30" />
 
