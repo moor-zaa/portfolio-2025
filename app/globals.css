@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Helvetica Black";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bolder;
   src: local("Helvetica"), url("/fonts/Helvetica-Black.woff") format("woff");
 }
 
@@ -63,7 +63,7 @@
 
 :root {
   --font-size: 16px;
-  --background: #0a0a0a;
+  --background: #030213;
   --foreground: #ffffff;
   --card: #0a0a0a;
   --card-foreground: #ffffff;
@@ -75,7 +75,7 @@
   --secondary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: #888888;
-  --accent: #32d792;
+  --accent: #1a9360;
   --accent-foreground: #ffffff;
   --destructive: #1cd6a4;
   --destructive-foreground: #ffffff;
@@ -192,70 +192,15 @@
   }
 }
 
-/**
- * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
- */
-@layer base {
-  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
-    h1 {
-      font-size: 8rem;
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: 4rem;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      font-size: var(--text-lg);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h4 {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    p {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
-
-    label {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    button {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    input {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
-  }
-}
 
 html {
   font-size: var(--font-size);
 }
 
 body {
-  background: #030213;
+  background: var(--background);
   font-family: "Helvetica";
+  overflow-x:  hidden;
 }
 
 h1,

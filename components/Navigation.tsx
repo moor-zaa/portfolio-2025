@@ -19,7 +19,7 @@ export function Navigation() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 px-8 py-8 bg-black/10 backdrop-blur-3xl"
+      className="fixed top-0 left-0 right-0 z-50 px-8 py-4 bg-black/10 backdrop-blur-xl"
     >
       <div className="flex items-center justify-between">
         {/* Logo */}

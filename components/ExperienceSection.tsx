@@ -242,7 +242,7 @@ export function ExperienceSection() {
                   </p>
                 </div>
                 <div className="lg:col-span-7">
-                  <h4 className="text-white mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
+                  <h4 className="text-accent mb-3 md:mb-4 uppercase tracking-wide text-sm md:text-base">
                     {exp.role}
                   </h4>
                   <p className="text-white/60 text-xs md:text-sm leading-relaxed">
