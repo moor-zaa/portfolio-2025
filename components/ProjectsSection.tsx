@@ -1,13 +1,35 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+
+const ExploreButton = ({ url }: { url: string }) => {
+  return (
+    <motion.a
+      href={url}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      target="_blank"
+      className="flex items-center text-sm p-2  w-fit border border-emerald-500 hover:bg-emerald-500 tracking-wider transition-colors mt-4"
+    >
+      Explore <ArrowRight size={18} />
+    </motion.a>
+  );
+};
 
 export function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const projects = [
     {
+      title: "Dextrading",
+      url: "https://dextrading.com/",
+      subtitle: "Next.js · Typescript · Tradingview · Thanstack · 2025",
+      image: "/images/dextrading.png",
+    },
+    {
       title: "A-eyes",
+      url: "https://a-eyes.app/",
       subtitle: "React · AI · Tailwind · Typescript · 2024",
       image1: "/images/a-eyes1.jpg",
       image2: "/images/a-eyes2.jpg",
@@ -15,12 +37,15 @@ export function ProjectsSection() {
       image4: "/images/a-eyes4.jpg",
     },
     {
-      title: "Dextrading",
-      subtitle: "Next.js · Typescript · Tradingview · Thanstack · 2025",
-      image: "/images/dextrading.jpg",
+      title: "Gaming Website",
+      url: "https://creative-website-one.vercel.app/",
+      subtitle: "React · GSAP · framer-motion · Tailwind · Typescript · 2025",
+      image: "/images/gaming.jpg",
     },
+
     {
       title: "Quby Webapp",
+      url: "https://app.quby.ir",
       subtitle: "React · CSS · Javascript · React-Query · 2022",
       image1: "/images/quby1.jpg",
       image2: "/images/quby2.jpg",
@@ -67,7 +92,7 @@ export function ProjectsSection() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {index % 2 === 0 ? (
+              {index % 2 !== 0 ? (
                 <div className="flex flex-col lg:grid lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center">
                   {/* Project info - Top on mobile, Right on desktop */}
                   <div className="order-1 lg:order-2 lg:pl-8">
@@ -77,6 +102,7 @@ export function ProjectsSection() {
                     <p className="text-white/60 text-xs md:text-sm">
                       {project.subtitle}
                     </p>
+                    {project.url && <ExploreButton url={project.url} />}
                   </div>
 
                   {/* Sliced images - Bottom on mobile, Left on desktop */}
@@ -155,6 +181,8 @@ export function ProjectsSection() {
                     <p className="text-white/60 text-xs md:text-sm">
                       {project.subtitle}
                     </p>
+
+                    {project.url && <ExploreButton url={project.url} />}
                   </div>
 
                   {/* Image - Bottom on mobile, Right on desktop */}
